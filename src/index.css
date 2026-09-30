@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Alexandria', 'Cairo', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Cairo', 'Alexandria', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-bg: #040405;
+  --color-brand-surface: #23170D;
+  --color-brand-bronze: #4A2F15;
+  --color-brand-gold: #F5BF1E;
+  --color-brand-gold-light: #FBD052;
+  --color-brand-gold-deep: #A7690C;
+  --color-brand-text: #FCFCFA;
+  --color-brand-secondary: #C8C5BA;
+  --color-brand-muted: #797979;
+}
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  background-color: #040405;
+  color: #FCFCFA;
+}
+
+/* Custom scrollbar for dark bronze theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #040405;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A2F15;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A7690C;
+}
+
+/* Tabular figures for numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subdued gold glow utility */
+.gold-glow {
+  box-shadow: 0 0 25px -5px rgba(245, 191, 30, 0.15);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 30px -4px rgba(245, 191, 30, 0.25);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "First $1,000 Calculator - حاسبة أول 1000 دولار من الأفلييت",
+  "description": "أداة تعليمية تحول أهداف التسويق بالعمولة (Affiliate Marketing) إلى معادلة رقمية واضحة مبنية على المشاهدات والنقرات والمبيعات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

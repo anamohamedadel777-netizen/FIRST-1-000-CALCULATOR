@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useMemo } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { APP_CONFIG } from './config';
 import { CalculatorInputsState, CalculationResult } from './types';
 import { calculateAll, validateInputs } from './utils/calculator';
@@ -208,6 +209,9 @@ export default function App() {
 
       {/* Brand Footer */}
       <Footer />
+      
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
